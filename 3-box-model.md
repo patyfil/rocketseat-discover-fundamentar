@@ -26,3 +26,75 @@ Essa caixa possui propriedades de uma caixa (2D)
 * Espaços fora da caixa → margin      margin  
 
 *Cada elemento na sua página, será considerado uma caixa.*
+
+<img src="box-model.png" width=250px>
+
+## box-sizing
+
+Como será calculado o tamanho total da caixa?
+
+- content-box|border-box
+  
+```css
+div {
+  box-sizing: border-box;
+}
+```
+
+### Exemplo:
+
+#### HTML
+
+```html
+<div>
+  css é incrível!
+</div>
+```
+___
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin: 10%;
+}
+```
+
+<img src="./css-incrivel.jpg">
+
+___
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin: 10%;
+  padding: 0 20px;
+}
+```
+
+<img src="./css-padding.jpg">
+
+___
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  margin: 10%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+```
+
+<img src="./css-box-sizing.jpg">
+
