@@ -144,12 +144,14 @@ O margin é aplicado em elementos com display block
 
 Cuidado com o margin collapsing que é quando o top se junta ao bottom  
 
+<https://developer.mozilla.org/en-US/docs/Web/CSS/margin>
+
 ## padding
 
 Preenchimento interno da caixa  
 
 `padding-top | padding-right | padding-bottom | padding-left`  
-values: `<length>` | `<percentage>` | auto  
+values: `<length>` | `<percentage>`  
 
 Geralmente usamos uma forma abreviada (**shorthand**) para escrever o **margin**. Esse formato segue o sentido horário iniciando pelo `top`, seguindo para `right`, `bottom` e `left`.  
 
