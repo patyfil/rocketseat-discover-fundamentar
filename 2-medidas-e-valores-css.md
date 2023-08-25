@@ -111,5 +111,11 @@ Em programação, funções são reconhecidas por causar um reaproveitamento de 
 ## Strings e identificadores
 
 * Strings: Texto envolto em aspas  
-* Identificadores: red, black, gold;  
+  
+```css
+.box::after {
+  content: "Isso é uma string"
+}
+```
 
+* Identificadores: red, black, gold
