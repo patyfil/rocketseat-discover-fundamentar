@@ -2,6 +2,23 @@
 
 ## Guia Estelar de CSS – Cascading Style Sheet  
 
+1 - Abertura - 00:35
+2 - Conhecendo o CSS - 02:01
+3 - Comentários - 01:57
+4 - Anatomia - 04:34
+5 - Seletores - 04:16
+6 - Box model - 05:22
+7 - Origem do CSS - 07:09
+8 - A Cascata - 05:27
+9 - Especificidade - 06:18
+10 - Regra important - 02:28
+11 - At rules - 01:30
+12 - Shorthand - 03:25
+13 - Funções - 02:04
+14 - DevTools - 02:49
+15 - Cuidados com a escrita - 02:18
+16 - Vendor prefixes - 02:10
+
 ### Introdução
 
 ### O que significa CSS?
@@ -185,7 +202,7 @@ São as seguintes:
     font-family: Arial, sans-serif;
 
     /* font shorthand */ 
-    font: bold 
+    font: bold italic .8em/1.2 Arial, sans-serif;
 ```
 
 ### Algumas das características do shorthand
