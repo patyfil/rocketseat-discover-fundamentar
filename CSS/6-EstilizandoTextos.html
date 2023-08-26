@@ -14,6 +14,10 @@
       font-family: "Courier New", monospace;
       white-space: pre-wrap;
     }
+
+    .maior {
+      width: 90%;
+    }
   </style>
 </head>
 
@@ -112,39 +116,127 @@
   <a href="https://fonts.google.com/ https://css-tricks.com/snippets/css/using-font-face-in-css/">Referência</a>
 
   <h2>8 - Font Variant</h2>
+  <p>Faz variações na apresentação da fonte</p>
+  <pre>
+    p {
+      font-variant: small-caps;
+    }
+  </pre>
 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant">Referência</a>
 
   <h2>9 - Font Stretch</h2>
+  <p>
+    Alargamento ou encolhimento da fonte <br>
+    Aceita palavras-chaves como: expanded, condensed, normal <br>
+    Aceita porcentagens de 50% a 200% <br>
+    Essa propriedade não vai funcionar em todas as fontes
+  </p>
 
+  <pre>
+    p {
+      font-stretch: expanded;
+    }
+  </pre>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-stretch">Referência</a>
+  <br>
+  <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Referência - Fonts styling
+    Fundamentals</a>
 
   <h2>10 - Letter Spacing</h2>
+  <p>Espaços entre caracteres</p>
+  <pre>
+    p {
+      letter-spacing: 2px;
+    }
+  </pre>
 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing">Referência</a>
 
   <h2>11 - Word Spacing</h2>
+  <p>Define o espaçamento entre palavras</p>
 
+  <pre>
+    p {
+      word-spacing: 2px;
+    }
+  </pre>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing">Referência</a>
 
   <h2>12 - Line Height</h2>
+  <p>Espaços entre linhas</p>
+  <p>Pode ser com unidades ou sem unidades de medida</p>
+  <p>Comuns: 1.5 ou 2</p>
 
+  <pre>
+    p {
+      line-height: 1.5;
+    }
+  </pre>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/line-height">Referência</a>
 
   <h2>13 - Text Transform</h2>
+  <p>Transformação do texto <br>
+    Valores podem ser: none | capitalize | uppercase | lowercase | full-width | full-size-kana</p>
 
+  <pre>
+    p {
+      text-transform: uppercase;
+    }
+  </pre>
+
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">Referência</a>
 
   <h2>14 - Text Decoration</h2>
+  <p>Aparência decorativa de um texto</p>
+  <p>Valores line: none | underline | overline | line-through | blink</p>
+  <p>Valore Style: wavy | dotted | double | dashed | solid</p>
+  <p>Valores Color: &lt;color&gt; values</p>
 
+  <pre>
+    p {
+      text-decoration: underline dashed red; /* shorthand */
+    }
+  </pre>
 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">Referência</a>
 
   <h2>15 - Text Align</h2>
+  <p>Alinhamento de um texto</p>
 
+  <pre>
+    p {
+      text-align: center; /* left | right | center | justify */
+    }
+  </pre>
 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-align">Referência</a>
 
   <h2>16 - Text Shadow</h2>
+  <p>Sombra aplicada a um texto</p>
+  <p>Permite múltiplos valores</p>
 
+  <pre class="maior">
+    p {
+      text-shadow: 1px 1px 1px red,
+                   2px 2px 1px blue;  /* offset-x | offset-y | blur-radius | color */
+    }
+  </pre>
 
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow">Referência</a>
 
   <h2>17 - Shorthand</h2>
+  <p>font-style, font-variant, font-weight, font-stretch, font-size, line-height, e font-family.</p>
 
+  <pre>
+    p {
+      font: italic small-caps bold 12px/1.5 arial, sans-serif;
+    }
+  </pre>
 
-
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/shorthand_forms">Referência</a>
 
 </body>
 
