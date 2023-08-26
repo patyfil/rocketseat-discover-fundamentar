@@ -1,10 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fontes e Textos</title>
+  
+  <style>
+    pre {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 70%;
+      font-family: "Courier New", monospace;
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
+
 <body>
   <h1>Fontes e Textos</h1>
   <h2>CSS Intermediário</h2>
@@ -32,6 +44,35 @@
 
   <hr>
 
+  <h2>Trabalhando com fontes</h2>
+  <p>Tipografia transmite mensagem</p>
+  <p>* negrito</p>
+  <p>* tamanho</p>
+  <p>* estilo</p>
+
+  <h2>Basic Font Properties</h2>
+  <ul>
+    <li>font-family</li>
+    <li>font-weight</li>
+    <li>font-style</li>
+    <li>font-size</li>
+  </ul>
+
+  <h2>Font Family</h2>
+  <ul>
+    <li>Tipo de fonte de um elemento</li>
+    <li>Lista de fontes e ordem de prioridade</li>
+    <li>Inclui *fallback* font</li>
+  </ul>
   
+  <pre>
+    p {
+      font-family: "Times New Roman", Times, serif;
+    }
+  </pre>
+  
+  
+
 </body>
+
 </html>
