@@ -1,5 +1,7 @@
 # Cores e Background
 
+Agora sim, cores
+
 ## Cores
 
 8 aulas - 12:21  
@@ -38,7 +40,7 @@ Usamos CSS para alterar cores do nosso documento.
 * background-color (para caixas)  
 * color (para textos)  
 * border-color (para caixas)  
-* outros... 
+* outros...  
 
 ### Valores
 
@@ -47,3 +49,88 @@ Podemos definir valores por:
 * palavra-chave (blue, transparent)  
 * hexadecimal (#990011)  
 * funções: rgb, rgba, hsl, hsla  
+
+## Keyword named values
+
+A keyword é uma palavra reservada que pode ser usada como um valor de propriedade em CSS.
+
+```css
+  color: currentcolor;  /* currentcolor = cor atual */
+```
+
+## Hexadecimal
+
+Hexadecimais são números baseados no sistema decimal, mas com cada dígito representando apenas seis posições diferentes.
+
+```css
+/*<hex-color> values 0-9 e A-F*/
+color: #090; /* RED, GREEN, BLUE */
+color: #009900;
+color: #090a;
+color: #009900aa;
+```
+
+## RGB
+
+RGB → Red, Green e Blue  
+O alpha representa a transparência da cor  
+
+```css
+/*<rgb()> values */
+color: rgb(34, 12, 64, 0.6) /* 0-255 */
+color: rgba(34, 12, 64, 0.6)
+```
+
+## HSL
+
+HSL → Hue - Saturation - Lightness
+
+```css
+color: hsl(180, 100%, 50%, 60%)
+color: hsla(180, 100%, 50%, 60%)
+```
+
+```css
+element {
+  /* Keyword values */
+  color: currentcolor;  /* currentcolor = cor atual */
+
+  /* <named-color> values */
+  color: red;
+  color: orange;
+  color: tan;
+  color: rebeccaapurple;
+
+  /* <hex-color> values 0-F */
+  /* O alpha representa a transparência da cor */
+  color: #090; /* 0:RED, 9:GREEN, 0:BLUE */
+  color: #009900; /* 00:RED, 99:GREEN, 00:BLUE */
+  color: #090a; /* RGB ALFA */
+  color: #009900aa;
+
+  /* <rgb()> values */
+  color: rgb(34, 12, 64, 0.6); /* 0-255 */
+  color: rgba(34, 12, 64, 0.6);
+  color: rgb(34 12 64 / 0.6);
+  color: rgba(34 12 64 / 0.3);
+  color: rgb(34.0 12 64 / 60%);
+  color: rgba(34.6 12 64 / 30%);
+
+  /* <hsl()> values */
+  color: hsl(30, 100%, 50%, 0.6); /* Hue - Saturation - Lumiance */
+  color: hsla(30, 100%, 50%, 0.6);
+  color: hsl(30 100% 50% / 0.6);
+  color: hsla(30 100% 50% / 0.6);
+  color: hsl(30.0 100% 50% / 60%);
+  color: hsla(30.2 100% 50% / 60%);
+
+  /* Global values */
+  color: inherit; /* Herança */
+  color: initial;
+  color: unset;
+}
+```
+
+Referência
+<https://developer.mozilla.org/en-US/docs/Web/CSS/color_value>
+
