@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamento de elementos</title>
+</head>
+
+<body>
+  <h1>Layouts</h1>
+  <h2>índice</h2>
+  <h3>Posicionando foguetes - 11 aulas - 25:32m</h3>
+  <ol>
+    <li>Abertura - 00:13</li>
+    <li>Page Layouts - 01:38</li>
+    <li>Position - 01:09</li>
+    <li>Static - 00:16</li>
+    <li>Relative - 01:25</li>
+    <li>Absolute - 03:18 </li>
+    <li>Fixed - 00:58 </li>
+    <li>Element Stacking - 02:03 </li>
+    <li>Flex - 04:31</li>
+    <li>Grid - 07:23</li>
+    <li>Grid ou Flexbox - 02:38</li>
+  </ol>
+
+  <h2>2 - Page Layouts</h2>
+  <p>Como posicionar elementos na página</p>
+  <ul>
+    <li>Tables</li>
+    <li>Floats e clear</li>
+    <li>Frameworks e Grid Systems</li>
+    <li>Flexbox</li>
+    <li>Grid</li>
+  </ul>
+
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+  </svg>
+
+
+  <svg width="100" height="100">
+    <rect width="100%" height="100%" stroke="green" stroke-width="" fill="blue" />
+  </svg>
+
+  <h2>3 - Position (Posicionamentos)</h2>
+  <p>Controlar onde, na página, o elemento irá ficar,
+    alterando o fluxo normal dos elementos.
+  </p>
+  <p>- Name: Position <br>
+    - Value: static | relative | absolute | fixed
+  </p>
+  <p>Lembrando que o fluxo normal dos elementos é ficar um abaixo do outro, a não ser no caso de elementos inline, que
+    ficam um ao lado do outro.</p>
+
+  <xmp>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+  </xmp>
+
+  <h2>4 - Static</h2>
+
+  <div class="box1 box"></div>
+  <div class="box2 box"></div>
+  <div class="box3 box"></div>
+
+  <style>
+    .box {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+
+    .box1 {
+      background: red;
+    }
+
+    .box2 {
+      background: green;
+    }
+
+    .box3 {
+      background: blue;
+    }
+  </style>
+
+  <h2>5 - Relative</h2>
+  <h3>position: relative;</h3>
+  <p><strong>5 propriedades: </strong>top, right, bottom, left, z-index</p>
+
+  <div class="box4 box"></div>
+  <div class="box5 box"></div>
+  <div class="box6 box"></div>
+
+  <xmp>
+    .box4 {
+      background: red;
+      position: relative;
+      left: 50px;
+    }
+  </xmp>
+
+
+
+  <style>
+    .box4 {
+      background: red;
+      position: relative;
+      left: 50px;
+    }
+
+    .box5 {
+      background: green;
+    }
+
+    .box6 {
+      background: blue;
+    }
+  </style>
+
+  <h2>6 - Absolute</h2>
+
+
+
+  <h2>7 - Fixed</h2>
+
+
+  <h2>8 - Element Stacking</h2>
+
+
+  <h2>9 - Flex</h2>
+
+
+
+  <h2>10 - Grid</h2>
+
+
+
+  <h2>11 - Grid ou Flexbox</h2>
+
+
+
+</body>
+
+</html>
