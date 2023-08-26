@@ -1,5 +1,7 @@
 # Rocketseat - Discover - Trilha Fundamentar
 
+## CSS Inicial
+
 ## Guia Estelar de CSS – Cascading Style Sheet  
 
 1 - Abertura - 00:35

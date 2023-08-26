@@ -1,4 +1,4 @@
-# Nem tudo são Pixels
+# CSS Inicial - Nem tudo são Pixels
 
 Nesse curso vamos aprender como funcionam as unidades de medidas e valores no CSS, como tipos numéricos, unidades comuns, distâncias absolutas e relativas entre os elementos, porcentagens e muito mais.
 
