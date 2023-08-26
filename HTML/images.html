@@ -1,11 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Images</title>
 </head>
+
 <body>
-  <h1>Images</h1>
+  <h1>índice</h1>
+  <p>Images - 6 aulas - 23:09</p>
+  <ol>
+    <li>Images - 04:20</li>
+    <li>Praticando images - 02:20</li>
+    <li>Background image - 01:19</li>
+    <li>Figures - 01:50</li>
+    <li>Intro de SVG - 04:52</li>
+    <li>SVG na prática - 08:28</li>
+  </ol>
+
+  <h2>1 - Images</h2>
+  <ul>
+    <h3>img</h3>
+    <li>src</li>
+    <li>alt</li>
+    <li>title</li>
+    <li>width</li>
+    <li>height</li>
+    <li>adicionando link</li>
+  </ul>
+  <a href="https://google.com">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"
+      title="Google Logo" width="" height="50">
+  </a>
+  <br>
+  <h2>2 - Praticando images</h2>
+  <a href="https://rocketseat.com.br">
+    <img src="https://www.rocketseat.com.br/icons/icon-48x48.png" alt="Logo da Rocketseat" title="Logo da Rocketseat"
+      width="" height="50">
+  </a>
+
+  <h2>3 - background-image</h2>
+  <ul>
+    <li>com a tag style</li>
+    <li>somente para estilo</li>
+    <li>não é semântico e falta significado</li>
+  </ul>
+
+  <p style="background-image: url(./icon.png);">Imagem</p>
+
+
+  <h2>4 - Figures e figcaption</h2>
+  <p>Criando título visíveis para as imagens</p>
+  <!-- <xmp> maneira obsoleta de exibir código sem interpretar -->
+  <xmp>
+    <figure> e <figcaption>
+  </xmp>
+  <hr>
+  <p>Esse jeito não é semântico:</p>
+  <xmp>
+    <div class="figure">
+      <a href="https://google.com">
+        <img src="https://source.unsplash.com/random" alt="Imagem de title" title="Colocar um título na imagem"
+          height="100px">
+      </a>
+      <p>Colocar um título na imagem</p>
+    </div>
+  </xmp>
+
+  <!-- <pre> exibir código sem interpretar -->
+  <!-- <pre>
+    &lt;figure&gt; e &lt;figcaption&gt;
+  </pre> -->
+  <div class="figure">
+    <a href="https://google.com">
+      <img src="https://source.unsplash.com/random" alt="Imagem de title" title="Colocar um título na imagem"
+        height="100px">
+    </a>
+    <p>Colocar um título na imagem</p>
+  </div>
+  <hr>
+  <p>Modo correto semânticamente:</p>
+  <xmp>
+    <a href="https://google.com">
+      <figure>
+        <img src="https://source.unsplash.com/random" alt="Imagem de title" title="Colocar um título na imagem"
+          height="100px">
+        <figcaption>Colocar um título na imagem</figcaption>
+      </figure>
+    </a>
+  </xmp>
+  <a href="https://google.com">
+    <figure>
+      <img src="https://source.unsplash.com/random" alt="Imagem de title" title="Colocar um título na imagem"
+        height="100px">
+      <figcaption>Colocar um título na imagem</figcaption>
+    </figure>
+  </a>
+
+  <h2>5 - Intro de SVG</h2>
+  <p>É uma marcação, estilo html, mas não é para textos, e sim para fazer imagens.</p>
+  <p>Possuimos elementos para gerar formas</p>
+  <p>Para entender melhor</p>
+  <p> - Imagem rasterizada(jpg) x Imagem vetorizada(svg)</p>
+
+  <p>Benefícios da imagem vetorizada</p>
+  <ul>
+    <li>Maior acessibilidade e Seo</li>
+    <li>Performance</li>
+    <li>Estilo - Pode ser editada via CSS ou atributos</li>
+    <li>Interatividade</li>
+    <li>Mais leve</li>
+    <li>Mais detalhada</li>
+  </ul>
+  <p>Desvantagens</p>
+  <ul>
+    <li>Pode ser mais complicado de trabalhar</li>
+    <li>Quanto mais complexa a imagem, mais trabalho para o navegador</li>
+    <li>Navegadores mais antigos não possuem suporte a essa tag</li>
+  </ul>
+  <p>Para fotografias, ainda prefira usar imagens rasterizadas.
+    Exemplo: .png, .jpg, .jpeg</p>
+
+  <img src="./assets-example/ball.png" alt="">
+  <img src="./assets-example/ball.svg" alt="">
+
+  <h2>6 - SVG na prática</h2>
+  <xmp>
+    <svg width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="red" stroke-width="6" fill="yellow" />
+    </svg>
+  </xmp>
+  <svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="red" stroke-width="6" fill="yellow" />
+  </svg>
+<hr>
+  <xmp>
+    <svg width="100" height="100">
+      <rect width="100%" height="100%" stroke="green" stroke-width="12" fill="yellow" />
+    </svg>
+  </xmp>
+  <svg width="100" height="100">
+    <rect width="100%" height="100%" stroke="green" stroke-width="12" fill="yellow" />
+  </svg>
+  <hr>
+  <p>background-color:</p>
+  <xmp>
+    <svg style="background-color: blue;" width="100" height="100">
+      <circle cx="50" cy="50" r="40" stroke="red" stroke-width="6" fill="yellow" />
+    </svg>
+  </xmp>
+  <svg style="background-color: blue;" width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="red" stroke-width="6" fill="yellow" />
+  </svg>
 </body>
+
 </html>
