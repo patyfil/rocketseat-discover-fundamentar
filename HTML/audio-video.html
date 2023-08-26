@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio e Vídeo</title>
+</head>
+
+<body>
+  <h1>Audio e Vídeo</h1>
+  <h2>índice</h2>
+  <p>4 aulas - 19:55 <br>
+    01 - Abertura - 00:18 <br>
+    02 - Vídeo - 07:41 <br>
+    03 - Áudio - 02:57 <br>
+    04 - Iframe - 08:59
+  </p>
+
+  <h2>Baixe os materiais usados na aula <a
+      href="https://maykbrito.notion.site/Assets-HTML-Medias-08d5b0757ed54d7895b8a4c59a6abe32">AQUI</a></h2>
+
+  <h2 style="color:red;">Vídeo</h2>
+  <ol>
+    <li>src</li>
+    <li>controls</li>
+    <li>Se não funcionar?</li>
+    <li>falback content</li>
+    <li>source <br>
+      - src <br>
+      - type <br>
+    </li>
+    <li>sobre serviços de terceiros</li>
+  </ol>
+
+  <video controls poster="images.jpeg" width="300" height="200" preload="auto" loop muted>
+    <source src="./assets-example/rocket.mp4" type="video/mp4">
+    <p>Este browser não suporta video, baixe-o aqui
+      <a href="#"></a>
+    </p>
+  </video>
+
+  <video src="./assets-example/rocket.mp4" controls>
+    <p>Este browser não suporta video, baixe-o aqui
+      <a href="#"></a>
+    </p>
+  </video>
+
+  <video controls autoplay muted>
+    <source src="./assets-example/rocket.mp4" type="video/mp4">
+    <p>Este browser não suporta video, baixe-o aqui
+      <a href="#"></a>
+    </p>
+  </video>
+
+  <h2 style="color:red;">Áudio</h2>
+
+  <ol>
+    <li>src</li>
+    <li>controls</li>
+    <li>Se não funcionar? <br>
+      - falback content
+    </li>
+    <li>source <br>
+      - src <br>
+      - type <br>
+    </li>
+  </ol>
+
+  <audio controls muted>
+    <source src="./assets-example/viper.mp3" type="audio/mp3">
+    <source src="./assets-example/viper.ogg" type="audio/ogg">
+    <p>Seu navegador não suporta áudio.</p>
+  </audio>
+
+  <h2 style="color:red;">Iframe</h2>
+  <ul>
+    <h3>Atributos</h3>
+    <li>src</li>
+    <li>height</li>
+    <li>width</li>
+    <li>title (acessibilidade)</li>
+    <li>allowfullscreen</li>
+    <li>frameborder</li>
+  </ul>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/fbzUo-uQUeY?si=IGtHFrewt8s1MI-G"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</body>
+
+</html>
