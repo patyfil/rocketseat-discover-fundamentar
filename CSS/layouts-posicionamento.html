@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posicionamento de elementos</title>
+</head>
+
+<body>
+  <h1>Layouts</h1>
+  <h2>índice</h2>
+  <h3>Posicionando foguetes - 11 aulas - 25:32m</h3>
+  <ol>
+    <li>Abertura - 00:13</li>
+    <li>Page Layouts - 01:38</li>
+    <li>Position - 01:09</li>
+    <li>Static - 00:16</li>
+    <li>Relative - 01:25</li>
+    <li>Absolute - 03:18 </li>
+    <li>Fixed - 00:58 </li>
+    <li>Sticky</li>
+    <li>Element Stacking - 02:03 </li>
+    <li>Flex - 04:31</li>
+    <li>Grid - 07:23</li>
+    <li>Grid ou Flexbox - 02:38</li>
+  </ol>
+
+  <hr>
+
+  <h2>2 - Page Layouts</h2>
+  <p>Como posicionar elementos na página</p>
+  <ul>
+    <li>Tables</li>
+    <li>Floats e clear</li>
+    <li>Frameworks e Grid Systems</li>
+    <li>Flexbox</li>
+    <li>Grid</li>
+  </ul>
+
+  <hr>
+
+  <h2>3 - Position (Posicionamentos)</h2>
+  <p>Controlar onde, na página, o elemento irá ficar,
+    alterando o fluxo normal dos elementos.
+  </p>
+  <p>- Name: Position <br>
+    - Value: static | relative | absolute | fixed
+  </p>
+  <p>Lembrando que o fluxo normal dos elementos é ficar um abaixo do outro, a não ser no caso de elementos inline, que
+    ficam um ao lado do outro.</p>
+
+  <xmp>
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+
+    .box {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+    }
+  </xmp>
+
+  <hr>
+
+  <h2>4 - Static</h2>
+  <p>Os elementos posicionados estáticos não são afetados pelas propriedades superior, inferior, esquerda e direita.
+    <br>
+    Um elemento <strong>with position: static;</strong> não está posicionado de nenhuma maneira especial; está sempre
+    posicionado de acordo com o fluxo normal da página
+  </p>
+
+  <xmp>
+    .box1 {
+    background: red;
+    }
+
+    .box2 {
+    background: green;
+    }
+
+    .box3 {
+    background: blue;
+    }
+  </xmp>
+  <div class="div">
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+  </div>
+  <style>
+    .div {
+      width: 25%;
+      border: 1px solid red;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
+    }
+
+    .box1 {
+      background: red;
+    }
+
+    .box2 {
+      background: green;
+    }
+
+    .box3 {
+      background: blue;
+    }
+  </style>
+
+  <hr>
+
+  <h2>5 - Relative</h2>
+  <h3>position: relative;</h3>
+  <p><strong>5 propriedades: </strong>top, right, bottom, left, z-index</p>
+  <p>Um elemento com <strong>position: relative;</strong> é posicionado em relação à sua posição normal. <br>
+    Definir as propriedades superior, direita, inferior e esquerda de um elemento relativamente posicionado fará com que
+    ele seja ajustado fora de sua posição normal. <br>
+    Outros conteúdos não serão ajustados para caber em qualquer lacuna deixada pelo elemento.</p>
+  <xmp>
+    .box4 {
+    background: red;
+    position: relative;
+    left: 40px;
+    top: 80px;
+    }
+    .box5 {
+    background: green;
+    }
+
+    .box6 {
+    background: blue;
+    }
+  </xmp>
+  <div class="div">
+    <div class="box4 box"></div>
+    <div class="box5 box"></div>
+    <div class="box6 box"></div>
+  </div>
+
+  <style>
+    .box4 {
+      background: red;
+      position: relative;
+      left: 40px;
+      top: 80px;
+    }
+
+    .box5 {
+      background: green;
+    }
+
+    .box6 {
+      background: blue;
+    }
+  </style>
+
+  <hr>
+
+  <h2>6 - Absolute</h2>
+  <h3>position: absolute;</h3>
+  <p><strong>5 propriedades: </strong>top, right, bottom, left, z-index</p>
+  <p>É como se criasse outra camada por cima da página, e o 'box7 vermelho' estivesse sozinho na página</p>
+  <p>Um elemento com <strong>position: absolute;</strong> é posicionado em relação ao ancestral posicionado mais próximo
+    (em vez de posicionado em relação à janela de visualização, como fixo).
+    <br>
+    No entanto; se um elemento posicionado de forma absoluta não tiver ancestrais posicionados, ele usará o corpo do
+    documento e se moverá junto com a rolagem da página.
+    <br>
+    Nota: Elementos posicionados de forma absoluta são removidos do fluxo normal e podem se sobrepor a elementos.
+  </p>
+  <xmp>
+    div {
+    position: relative;
+    }
+
+    .box7 {
+    background: red;
+    position: absolute; // em relação a div que é relative
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+    }
+    .box8 {
+    background: green;
+    }
+    .box9 {
+    background: blue;
+    }
+  </xmp>
+  <div class="div">
+    <div class="box7 box"></div>
+    <div class="box8 box"></div>
+    <div class="box9 box"></div>
+  </div>
+  <style>
+    div {
+      position: relative;
+    }
+
+    .box7 {
+      background: red;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: 1;
+    }
+
+    .box8 {
+      background: green;
+    }
+
+    .box9 {
+      background: blue;
+    }
+  </style>
+
+  <hr>
+
+  <h2>7 - Fixed</h2>
+  <p>Um elemento com <strong>position: fixed;</strong> é posicionado em relação à janela de visualização, o que
+    significa que ele permanece sempre no mesmo lugar mesmo se a página for rolada.
+    <br>
+    As propriedades superior, direita, inferior e esquerda são usadas para posicionar o elemento.
+    <br>
+    Um elemento fixo não deixa espaço na página onde normalmente estaria localizado.
+  </p>
+  <img src="./fixed.gif" alt="">
+  <hr>
+
+  <h2>8 - Sticky</h2>
+  Um elemento com <strong>position: sticky;</strong> é posicionado com base na posição de rolagem do usuário.
+  <br>
+  Um elemento fixo alterna entre <strong>relative</strong> e <strong>fixed</strong>, dependendo da posição de rolagem.
+  <br>
+  Ele é posicionado em relação até que uma determinada posição de deslocamento seja atingida na janela de visualização -
+  então ele "gruda" no lugar (como
+  position:fixed).
+
+  <p>
+    Nota: O Internet Explorer não suporta posicionamento fixo. O Safari requer um prefixo -webkit-.
+    <br>
+    Você também deve especificar pelo menos um valor para <strong>top</strong>, <strong>right</strong>,
+    <strong>left</strong> ou <strong>bottom</strong> para que o posicionamento fixo
+    funcione.
+  </p>
+  <img width="160px" src="./sticky.gif" alt="">
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="./sticky2.gif" alt="">
+
+  <hr>
+
+  <h2>9 - Element Stacking</h2>
+
+  <xmp>
+    .div {
+    height: 100px;
+    }
+
+    .box10 {
+    background: red;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    }
+    .box11 {
+    background: green;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    }
+    .box12 {
+    background: blue;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    }
+  </xmp>
+
+  <div class="caixa">
+    <div class="box10 box"></div>
+    <div class="box11 box"></div>
+    <div class="box12 box"></div>
+  </div>
+  <style>
+    .caixa {
+      width: 100px;
+      height: 100px;
+      border: 2px solid green;
+    }
+
+    .box10 {
+      background: red;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+    }
+
+    .box11 {
+      background: green;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 1;
+    }
+
+    .box12 {
+      background: blue;
+      position: absolute;
+      top: 35px;
+      left: 35px;
+    }
+  </style>
+
+  <hr>
+  <h2>10 - Flexbox</h2>
+  <p>
+    * Nos permite posicionar os elementos dentro da caixa.
+    * Controle em uma dimensão (horizontal ou vertical)
+    * Alinhamento, direcionamento, ordenar e tamanhos
+  </p>
+
+  <xmp>
+    div.parent {
+      display: flex;
+    }
+  </xmp>
+
+  <h3>Flex-direction</h3>
+  <p>* Qual a direção do flex: horizontal ou vertical</p>
+  <p>row | column</p>
+
+  <h3>Alinhamento</h3>
+  <p>
+    justify-content <br>
+    align-items
+  </p>
+
+  <h4>HTML</h4>
+  <xmp>
+    <div class="container">
+      <div class="box blue"></div>
+      <div class="box red"></div>
+      <div class="box green"></div>
+    </div>
+  </xmp>
+
+  <h4>CSS</h4>
+  <xmp>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 30%;
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 0px;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </xmp>
+
+
+  <div class="container">
+    <div class="box blue"></div>
+    <div class="box red"></div>
+    <div class="box green"></div>
+  </div>
+<style>
+    .container {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid green;
+    }
+    .box {
+      margin-bottom: 0px;
+    }
+    .blue {
+    background-color: blue;
+    }
+    .red {
+    background-color: red;
+    }
+    .green {
+    background-color: green;
+    }
+</style>
+
+  <hr>
+  <h2>11 - Grid</h2>
+  <p>* Posicionamento dos elementos dentro da caixa</p>
+  <p>* Posicionamento horizontal e vertical ao mesmo tempo</p>
+  <p>* Pode ser flexível ou fixo</p>
+  <p>* Cria espaços para os elementos filhos habitarem</p>
+
+  <img src="./grid.jpg" alt="">
+  <br>
+  <a href="https://codepen.io/patyfil/pen/KKbdLeq?editors=1100">Veja aqui o modelo</a>
+  
+  <hr>
+
+  <h2>12 - Grid e/ou Flexbox</h2>
+
+<img src="./grid-flexbox.jpg" alt="">
+
+<p>Aqui foi aplicado grid em todos os elementos e flexbox no header</p>
+<p>HTML</p>
+
+<style>
+  pre, xmp {
+    width: 20%;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+</style>
+
+<pre>
+  &lt;body&gt;
+    &lt;header&gt;
+      &lt;div&gt;logo&lt;/div&gt;
+      &lt;div&gt;menu&lt;/div&gt;
+    &lt;/header&gt;
+    &lt;main&gt;Conteúdo (main)&lt;/main&gt;
+    &lt;aside&gt;Infos adicionais (aside)&lt;/aside&gt;
+    &lt;footer&gt;Rodapé&lt;/footer&gt;
+  &lt;/body&gt;
+</pre>
+
+
+
+<p>CSS</p>
+
+<xmp>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main aside"
+      "footer footer";
+  
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr 250px;
+  
+    font-size: 24px;
+  }
+  
+  header {
+    grid-area: header;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  main {
+    grid-area: main;
+    background-color: red;
+  }
+  
+  aside {
+    grid-area: aside;
+    background-color: blue;
+  }
+  
+  footer {
+    grid-area: footer;
+    background-color: gray;
+  }  
+</xmp>
+
+</body>
+
+</html>
